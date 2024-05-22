@@ -1,6 +1,5 @@
 def run():
     # System hint
-    # Win + 6 to fast exit program
     system_hint = ("系统提示：我为你创建了功能，需要你的配合\n"
                 "系统会把文本发送给你，可能会看见其他用户名，可以打招呼，\n"
                 "你可能会看见无关信息，比如WhatApps中的部分聊天历史记录或界面信息你可以屏蔽并寻找要和你聊天的人,\n"
@@ -28,13 +27,13 @@ def run():
     # Send picture to AI
     x_2 = 950 / 1920 * screen_width
     y_2 = 920 / 1080 * screen_height
-    # Send message on WhatsApp
+    # Ready to  send message on WhatsApp
     x_3 = 850 / 1920 * screen_width
     y_3 = 950 / 1080 * screen_height
     # Get picture on Coze
     x_4 = 1000/ 1920 * screen_width
     y_4 = 500 / 1080 * screen_height
-    # Send call on WhatApps
+    # Send message on WhatApps
     x_5 = 1850 / 1920 * screen_width
     y_5 = 955 / 1080 * screen_height
     # Go to google send system hint to AI
@@ -55,9 +54,13 @@ def run():
             # Open WhatApps
             ac.hotkey("win", "1")
             ac.hotkey("ctrl", "1")
+            ac.click(x_3, y_3)
+            pyperclip.copy("系统:正在运行")
+            ac.hotkey("ctrl", "v")
+            ac.click(x_5, y_5)
 
             # Get message
-            # https://www.imagetotext.cc/ area
+            # https://www.imagetotext.cc/
             def take_screenshot(file_name):
                 ac.size()
                 screenshot = ac.screenshot()
@@ -122,7 +125,6 @@ def run():
             ac.click()
             # Delete picture file
             ac.hotkey("ctrl", "2")
-            # call:+1 system
             total = 1 + total
             # Go coze
             ac.hotkey("ctrl", "2")
@@ -136,7 +138,7 @@ def run():
             ac.moveTo(x_0, y_0)
             ac.click()
 
-            # Need Fix [nnnnnnnnnnnnnnnnnnnnnnnnnnnn] [KNOW]
+            # Already Fix [nnnnnnnnnnnnnnnnnnnnnnnnnnnn]
             time.sleep(1)
             ac.hotkey("ctrl", "a")
             ac.hotkey("ctrl", "c")
