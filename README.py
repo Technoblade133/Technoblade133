@@ -65,9 +65,9 @@ def run():
                 
             random1 = random.randint(1, 1000)
             take_screenshot(fr"C:/Users/user/Pictures/Screenshots/{random1}Coze.png")
-            print(take_screenshot)
             # save picture file
             Picture_name = fr"C:\Users\user\Pictures\Screenshots\{random1}Coze.png"
+            print(f"C:/Users/user/Pictures/Screenshots/{random1}ChatGPT.png")
             pyperclip.copy(Picture_name)
             # Image to text
             screen_width, screen_height = ac.size()
