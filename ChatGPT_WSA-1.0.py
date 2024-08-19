@@ -37,7 +37,7 @@ def run():
         webbrowser.open(URL1)
         webbrowser.open(URL2)
         webbrowser.open(URL3)
-    #web() # For developer
+    web() # For developer
     print(README1)
     if input("打开专注模式,准备就绪后点击enter/要退出输入任意文:"):
         exit()
